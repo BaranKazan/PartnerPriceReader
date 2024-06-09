@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 @Service
 public class PriceService {
 
-    private List<Advertiser> advertisers;
+    private final List<Advertiser> advertisers;
     private final String PATH = "src/main/resources/prices";
 
     public PriceService() {
