@@ -21,3 +21,20 @@ This will prevent a partner having huge requests to handle that would take some 
 
 ### How could your solution scale for multiple thousand requests per second?
 
+**Horizontal Scaling:** This is a solution commonly used when handling a heavy load of requests. 
+It will create multiple instances of the application and divide requests to the instances. 
+This can be managed using container orchestration tools such as Kubernetes or the cloud provider. 
+
+**Load Balancing**: Load Balancer: This solution can be used to evenly distribute requests to multiple instances. 
+Preventing a single instance from being bottlenecked, improving response time and availability.
+
+**Asynchronous Processing:** It is recommended to use asynchronous processes for tasks that do 
+not require immediate completion.
+
+**Caching:** This method could be used to reduce the load of the RESTful API. 
+By using the in-memory data storage such as the Redis and Memcached to cache frequently used data. 
+This will increase response time, decrease latency and efficiently use resources by avoiding repeated calls.
+
+**Queuing or Streaming:** Using services such as RabbitMQ or Kafka is recommended as well to manage the requests. 
+Ensuring that the data are processing consistency across different instances.  
+
